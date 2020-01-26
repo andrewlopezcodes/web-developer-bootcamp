@@ -1,3 +1,9 @@
 h1 {
   color: blue;
 }
+.listItems {
+  border: 2px solid #000000;
+}
+#finishVideo {
+  background-color: red;
+}
