@@ -1,38 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="scoreKeeperCss.css">
-  <title>Score Keeper</title>
-</head>
-<body>
-  <h1>Keeping Score</h1>
-  <div>
-    <div>
-      <h2 id="player1">Player 1</h2>
-      <p id="player1Score">0</p>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="scoreKeeperCss.css">
+
+    <title>Score Keepr</title>
+  </head>
+  <body>
+    <div class="containerOne">
+      <h1>Keeping Score</h1>
     </div>
-    <div>
-      <p>to</p>
+    
+    <div class="containerTwo">
+      <div class="row">
+        <div class="col-sm">
+          <h2 id="player1">Player 1</h2>
+          <p id="player1Score">0</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm">
+          <p id="centerTo">to</p>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="col-sm">
+          <h2 id="player2">Player 2</h2>
+          <p id="player2Score">0</p>
+        </div> 
+      </div>
     </div>
-    <div>
-      <h2 id="player2">Player 2</h2>
-      <p id="player2Score">0</p>
+
+    <div class="containerThree">
+      <div class="row">
+        <p id="firstPlayerTo">First Player to:</p>
+        <p id="gameFinishScore">0</p>
+      </div>
     </div>
-  </div>
-  <div>
-    <h3>Playing to:</h3>
-    <p id="gameFinishScore">0</p>
-  </div>
-  <div>
-     <input id="playTillNumber" type="number">
-      <button id="player1Button">Add Score to Player 1</button>
-      <button id="player2Button">Add Score to Player 2</button>    
-    <button id="resetScores">Reset Scores</button>
-  </div>
-  
-  <script type="text/javascript" src="scoreKeeper.js"></script>
-</body>
+
+    <div class="containerFour">
+      <div class="row">
+        <div class="col-sm">
+          <p>Enter winning score in the box.</p>
+          <input id="playTillNumber" type="number" placeholder="Winning Score Here" ">
+           <button id="player1Button" class="btn" >Add Score to Player 1</button>
+           <button id="player2Button" class="btn" >Add Score to Player 2</button>    
+         <button id="resetScores" class="btn" >Reset Scores</button>
+        </div>   
+      </div>
+    </div>
+    
+    
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scoreKeeper.js"></script>
+  </body>
+</html>
+
 </html>

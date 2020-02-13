@@ -1,3 +1,57 @@
 .winner {
   color: green;
 }
+
+body {
+  background-color: antiquewhite;
+}
+
+#player1Score {
+  font-size: 40px;
+  text-align: center;
+}
+
+#player2Score {
+  font-size: 40px;
+  text-align: center;
+}
+
+#centerTo {
+  font-size: 40px;
+  text-align: center;
+}
+
+#firstPlayerTo {
+  font-size: 40px;
+}
+
+#gameFinishScore {
+  color: red;
+  font-size: 50px;
+  text-align: center;
+}
+
+.containerOne {
+  text-align: center;
+  
+}
+
+.containerTwo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.containerThree {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.containerFour {
+  display: flex;
+  justify-content: space-around;
+  
+}
+/* .btn {
+  margin-inline: 10px;
+} */

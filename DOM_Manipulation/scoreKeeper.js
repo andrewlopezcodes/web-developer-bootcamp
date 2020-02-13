@@ -27,6 +27,7 @@ player1Button.addEventListener('click', function (){
   }
   
 });
+
 //Player 2
 var htmlPlayer2Score = document.getElementById("player2Score");
 var player2Score = 0;
@@ -74,12 +75,4 @@ resetButton.addEventListener("click", function(){
 
 
 
-
-
-// var incrementPlayer2Score = function(){
-//   player2Score++;
-//   console.log(player2Score);
-// };
-
-
-
+//Program written by github: @andrewlopezcodes
