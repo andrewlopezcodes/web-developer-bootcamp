@@ -1,10 +1,16 @@
+body {
+  background-color: antiquewhite;
+}
+
+.hovering {
+  font: red;
+}
+
 .winner {
   color: green;
 }
 
-body {
-  background-color: antiquewhite;
-}
+
 
 #player1Score {
   font-size: 40px;
