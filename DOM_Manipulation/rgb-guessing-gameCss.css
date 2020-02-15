@@ -28,11 +28,18 @@ p {
   justify-content: flex-end;
 }
 #section2 {
-  background-color: cornsilk;
-  height: 400px;
+  display: inline-flexbox;
+  align-content: center;
+  justify-content: space-around;
+  
 }
 
 #row1 {
+  background-color: crimson;
+  height: 350px;
+  padding-top: 10px;
+}
+#row2 {
   background-color: crimson;
   height: 350px;
   padding-top: 10px;
@@ -43,4 +50,40 @@ p {
   border-radius: 20px;
   height: 40px;
   width: 40px;
+  margin: 10px;
+}
+#colorBox2 {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+#colorBox3 {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+#colorBox4 {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+#colorBox5 {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+#colorBox6 {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
 }
