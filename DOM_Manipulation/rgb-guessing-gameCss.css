@@ -1,0 +1,46 @@
+body {
+  background-color: black;
+}
+.jumbotron {
+  background-color: cornflowerblue;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  font-size: x-large;
+  height: 250px;
+  margin: 0px;
+  
+}
+p {
+  color: white;
+  font-size: 40px;
+  margin: 0px;
+}
+#RGB {
+  padding: 0px 0px 0px 0px;
+  font-size: 70px;
+  margin: 0px;
+}
+#section1 {
+  background-color: darkgrey;
+}
+.lefftCol{
+  display: inline-flex;
+  justify-content: flex-end;
+}
+#section2 {
+  background-color: cornsilk;
+  height: 400px;
+}
+
+#row1 {
+  background-color: crimson;
+  height: 350px;
+  padding-top: 10px;
+}
+
+#colorBox1 {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}
