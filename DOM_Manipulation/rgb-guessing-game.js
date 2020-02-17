@@ -17,7 +17,9 @@ for(var i = 0; i < 3; i++){
   correctRGB.push(getRandomIntInclusive(min, max))
   console.log(correctRGB);
 }
+//----------------------------------------------------------------------------------
 
+//Attached Correct RGB to Page title
 
 
 var correctRed = correctRGB[0];
@@ -87,7 +89,9 @@ let shufflingArray = function(arr){
   }
   return arr;
 }
-//-------------------
+//------------------------------------------------------------------
+
+//shuffle colorMixedArray for random squre display
 
 var shuffledColorArray = shufflingArray(colorMixedArray);
 console.log("this is the shuffledColorArray - ");  
@@ -98,6 +102,7 @@ console.log(shuffledColorArray);
   
   console.log("The index of correctRGB is ");
   shuffledColorArray.indexOf(correctRGB);
+  console.log("The index of correctRGB is " + shuffledColorArray.indexOf(correctRGB));
 
   //attaching colors to boxes
 
@@ -115,3 +120,5 @@ console.log(shuffledColorArray);
   var square4 = document.getElementById("colorBox4").style.backgroundColor = fourthColor;
   var square5 = document.getElementById("colorBox5").style.backgroundColor = fifthColor;
   var square6 = document.getElementById("colorBox6").style.backgroundColor = sixthColor;
+
+  //EventListeners to make saures disapear
