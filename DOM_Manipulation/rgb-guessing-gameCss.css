@@ -28,6 +28,7 @@ p {
   justify-content: flex-end;
 }
 #section2 {
+  max-width: 600px;
   display: inline-flexbox;
   align-content: center;
   justify-content: space-around;
@@ -36,54 +37,43 @@ p {
 
 #row1 {
   background-color: crimson;
-  height: 350px;
+  height: 200px;
   padding-top: 10px;
 }
+
 #row2 {
   background-color: crimson;
-  height: 350px;
+  height: 200px;
   padding-top: 10px;
 }
 
 #colorBox1 {
   background-color: cornflowerblue;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  margin: 10px;
+  width: 30%;
+  margin: 10px auto;
 }
 #colorBox2 {
   background-color: cornflowerblue;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  margin: 10px;
+  width: 30%;
+  margin: 10px auto;
 }
 #colorBox3 {
   background-color: cornflowerblue;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  margin: 10px;
+  width: 30%;
+  margin: 10px auto;
 }
 #colorBox4 {
   background-color: cornflowerblue;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  margin: 10px;
+  width: 30%;
+  margin: 10px auto;
 }
 #colorBox5 {
   background-color: cornflowerblue;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  margin: 10px;
+  width: 30%;
+  margin: 10px auto;
 }
 #colorBox6 {
   background-color: cornflowerblue;
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  margin: 10px;
+  width: 30%;
+  margin: 10px auto;
 }

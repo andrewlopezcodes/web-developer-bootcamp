@@ -13,10 +13,20 @@ function getRandomIntInclusive(min, max) {
 //Create correct RGB combination
 var correctRGB = []
 
-for(var i =0; i<3; i++){
+for(var i = 0; i < 3; i++){
   correctRGB.push(getRandomIntInclusive(min, max))
   console.log(correctRGB);
 }
+
+
+
+var correctRed = correctRGB[0];
+var correctGreen = correctRGB[1];
+var correctBlue = correctRGB[2];
+document.getElementById("rgb1").innerText = correctRed;
+document.getElementById("rgb2").innerText = correctGreen;
+document.getElementById("rgb3").innerText = correctBlue;
+
 
 //--------------------------------------------------------------------------------
 
@@ -84,8 +94,24 @@ console.log("this is the shuffledColorArray - ");
 console.log(shuffledColorArray);
 
   console.log("This is the colorMixedArray - " + colorMixedArray);
-  console.log("THis is the original cardPosition array - "  + cardPosition);
   console.log("This is the correctRGB array - " + correctRGB);
   
   console.log("The index of correctRGB is ");
   shuffledColorArray.indexOf(correctRGB);
+
+  //attaching colors to boxes
+
+
+  var firstColor = `rgb(` + shuffledColorArray[0].toString() + `)`;
+  var secondColor = `rgb(` + shuffledColorArray[1].toString() + `)`;
+  var thirdColor = `rgb(` + shuffledColorArray[2].toString() + `)`;
+  var fourthColor = `rgb(` + shuffledColorArray[3].toString() + `)`;
+  var fifthColor = `rgb(` + shuffledColorArray[4].toString() + `)`;
+  var sixthColor = `rgb(` + shuffledColorArray[5].toString() + `)`;
+  
+  var square1 = document.getElementById("colorBox1").style.backgroundColor = firstColor;
+  var square2 = document.getElementById("colorBox2").style.backgroundColor = secondColor;
+  var square3 = document.getElementById("colorBox3").style.backgroundColor = thirdColor;
+  var square4 = document.getElementById("colorBox4").style.backgroundColor = fourthColor;
+  var square5 = document.getElementById("colorBox5").style.backgroundColor = fifthColor;
+  var square6 = document.getElementById("colorBox6").style.backgroundColor = sixthColor;
