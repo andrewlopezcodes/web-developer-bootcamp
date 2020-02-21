@@ -1,7 +1,7 @@
 //Creating random RGB numbers from 1 - 250
 
 var min = 1;
-var max = 250;
+var max = 255;
 var numberOfRandomNumbersNeededForRGB;
 var numberOfRandomNumbersNeededForSquares = 15;
 
@@ -11,8 +11,8 @@ var menuRGB2 = document.getElementById("menuRGB2");
 var menuRGB3 = document.getElementById("menuRGB3");
 var hardColorMixedArray = [];
 var easyColorMixedArray = [];
-var createdRGBeasy1 = [];
 var createdRGBeasy2 = [];
+var createdRGBeasy3 = [];
 var createdRGBhard2 = [];
 var createdRGBhard3 = [];
 var createdRGBhard4 = [];
@@ -20,6 +20,8 @@ var createdRGBhard5 = [];
 var createdRGBhard6 = [];
 var finishedShuffledColorArray;
 var intakeArray;
+var squares = document.querySelectorAll(".square");
+
 
 
 function getRandomIntInclusive(min, max) {
@@ -49,12 +51,15 @@ menuRGB3.innerText = correctRGB[2];
 
 //Creating random RGB combinations
 
+
+
+
 function fillingHardColorMixedArray(){
-  if(createdRGBhard2.length < 3){
+  if(createdRGBhard2.length < 3 ){
     createdRGBhard2.push(hardColorMixedArray[0]);
     hardColorMixedArray.shift();
     console.log("This is the createdRGBhard2 array - " + createdRGBhard2);
-  } else if(createdRGBhard3.length < 3 ){
+  } else if(createdRGBhard3.length < 3){
     createdRGBhard3.push(hardColorMixedArray[0]);
     hardColorMixedArray.shift();
   } else if(createdRGBhard4.length < 3 ){
@@ -66,12 +71,23 @@ function fillingHardColorMixedArray(){
   }else if(createdRGBhard6.length < 3 ){
     createdRGBhard6.push(hardColorMixedArray[0]);
     hardColorMixedArray.shift(createdRGBhard6);
-    
-  
   } else {
-    console.log("help")
+    console.log("were using easy mode")
   } 
 };
+  
+// function fillingEasyColorMixedArray(){
+//   if(createdRGBeasy2.length < 3){
+//     createdRGBeasy2.push(easyColorMixedArray[0]);
+//     easyColorMixedArray.shift();
+//     console.log("This is the createdRGBeasy2 array - " + createdRGBeasy2);
+//   } else if(createdRGBeasy3.length < 3 ){
+//     createdRGBeasy3.push(easyColorMixedArray[0]);
+//     easyColorMixedArray.shift();
+//   } else {
+//     console.log("were using hard mode")
+//   } 
+// };
   
 
 function createRandomRGBCombinationsForHardSquares (){
@@ -79,10 +95,17 @@ for(var d = 0; d < numberOfRandomNumbersNeededForSquares; d++){
     hardColorMixedArray.push(getRandomIntInclusive(min, max));
     fillingHardColorMixedArray(hardColorMixedArray);
   }
-  
 }
 
+// function createRandomRGBCombinationsForEasySquares (){
+//   for(var d = 0; d < numberOfRandomNumbersNeededForSquares; d++){
+//       easyColorMixedArray.push(getRandomIntInclusive(min, max));
+//       fillingEasyColorMixedArray(easyColorMixedArray);
+//     } 
+//   }
+
 createRandomRGBCombinationsForHardSquares();
+// createRandomRGBCombinationsForEasySquares();
 
 
     hardColorMixedArray.push(createdRGBhard2);
@@ -91,6 +114,14 @@ createRandomRGBCombinationsForHardSquares();
     hardColorMixedArray.push(createdRGBhard5);
     hardColorMixedArray.push(createdRGBhard6);
     hardColorMixedArray.push(correctRGB);
+
+    easyColorMixedArray.push(createdRGBeasy2);
+    easyColorMixedArray.push(createdRGBeasy3);
+    easyColorMixedArray.push(correctRGB);
+  
+
+  
+    
 
     
  
@@ -174,14 +205,17 @@ let shufflingArray = function(arr){
 
 
 
-var colorsReadyForAttachment = shufflingArray(hardColorMixedArray);
+var colorsReadyForHardModeAttachment = shufflingArray(hardColorMixedArray);
+// var colorsReadyForEasyModeAttachment = shufflingArray(easyColorMixedArray);
 
-console.log("this is the shufflingArray - ");  
-console.log(colorsReadyForAttachment);
+console.log("this is the colorsReadyForHardModeAttachment vvvvv ");  
+console.log(colorsReadyForHardModeAttachment);
 
   console.log("This is the hardColorMixedArray - " + hardColorMixedArray);
   console.log("This is the easyColorMixedArray - " + easyColorMixedArray);
   console.log("This is the correctRGB array - " + correctRGB);
+
+
   
   // console.log("The index of correctRGB is " + finishedShuffledColorArray.indexOf(correctRGB));
 
@@ -204,3 +238,14 @@ console.log(colorsReadyForAttachment);
 
   // //EventListeners to make saures disapear
   
+
+  for(var f = 0; f < squares.length; f++){
+    squares[f].background = colorsReadyForHardModeAttachment[f];
+    squares[f].addEventListener("click", function(){
+      var clickedColor = this.style.background;
+      if(clickedColor === correctRGB){
+        alert("Correct");
+      }
+    });
+
+  }

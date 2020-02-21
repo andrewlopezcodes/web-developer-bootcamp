@@ -4,53 +4,34 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="rgb-guessing-gameCss.css">
 
     <title>RBG Guessing Game</title>
   </head>
   <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="mainSign">
       <p>THE GREAT</p>
       <p id="RGB">RGB(<span id="menuRGB1">222</span>, <span id="menuRGB2">222</span>, <span id="menuRGB3">222</span>)</p>
       <p>GUESSING GAME</p>
     </div>
     <div id="section1">
-      <div class="container" class="lefftCol">
-        <div class="row">
-          <div class="col-sm" >
             <button class="btn-primary" id="resetButton">NEW COLORS</button>
-          </div>
-          <div class="col-sm"></div>
-          <div class="col-sm">
+            <span id="message"></span>
               <button type="button" class="btn btn-link">EASY</button>
               <button type="button" class="btn btn-link">HARD</button>
-          </div>
-        </div>  
-      </div>
     </div>
     
-    <div id="section2" class="container">
-      <div class="row" id="row1">
-          <div id="colorBox1"></div>
-          <div id="colorBox2"></div>
-          <div id="colorBox3"></div>
-      </div>
-      <div class="row" id="row2">
-          <div id="colorBox4"></div>
-          <div id="colorBox5"></div>
-          <div id="colorBox6"></div>
-        </div>
+    <div id="container">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
     </div>
       
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="rgb-guessing-game.js"></script>
   </body>
 
