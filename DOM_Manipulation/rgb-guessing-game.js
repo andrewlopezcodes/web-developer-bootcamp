@@ -6,6 +6,9 @@ var numberOfRandomNumbersNeededForRGB;
 var numberOfRandomNumbersNeededForSquares ;
 
 var correctRGB = [];
+var menuRGB1 = document.getElementById("menuRGB1");
+var menuRGB2 = document.getElementById("menuRGB2");
+var menuRGB3 = document.getElementById("menuRGB3");
 var hardColorMixedArray = [];
 var easyColorMixedArray = [];
 var createdRGBeasy1 = [];
@@ -16,6 +19,7 @@ var createdRGBhard4 = [];
 var createdRGBhard5 = [];
 var createdRGBhard6 = [];
 var finishedShuffledColorArray;
+
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -35,6 +39,10 @@ function createCorrectRGB(){
   return correctRGB;
 }
 
+createCorrectRGB();
+menuRGB1.innerText = correctRGB[0];
+menuRGB2.innerText = correctRGB[1];
+menuRGB3.innerText = correctRGB[2];
 
 //--------------------------------------------------------------------------------
 
@@ -58,9 +66,8 @@ function createRandomRGBCombinationsForSquares (){
 
 
 
-
   
-  if(createdRGB2.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
+  if(createdRGBhard2.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
     createdRGBhard2.push(hardColorMixedArray[0]);
     hardColorMixedArray.shift();
   } else if(createdRGBhard3.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
@@ -109,13 +116,14 @@ function shuffledColorArray(arr){
   }
 }
 
-console.log("this is the shuffledColorArray - ");  
-console.log(shuffledColorArray);
+console.log("this is the finishedShuffledColorArray - ");  
+console.log(finishedShuffledColorArray);
 
-  console.log("This is the colorMixedArray - " + colorMixedArray);
+  console.log("This is the hardColorMixedArray - " + hardColorMixedArray);
+  console.log("This is the easyColorMixedArray - " + easyColorMixedArray);
   console.log("This is the correctRGB array - " + correctRGB);
   
-  console.log("The index of correctRGB is " + shuffledColorArray.indexOf(correctRGB));
+  console.log("The index of correctRGB is " + finishedShuffledColorArray.indexOf(correctRGB));
 
  //attaching colors to boxes
 
