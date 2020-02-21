@@ -8,6 +8,14 @@ var numberOfRandomNumbersNeededForSquares ;
 var correctRGB = [];
 var hardColorMixedArray = [];
 var easyColorMixedArray = [];
+var createdRGBeasy1 = [];
+var createdRGBeasy2 = [];
+var createdRGBhard2 = [];
+var createdRGBhard3 = [];
+var createdRGBhard4 = [];
+var createdRGBhard5 = [];
+var createdRGBhard6 = [];
+var finishedShuffledColorArray;
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -47,42 +55,35 @@ function createRandomRGBCombinationsForSquares (){
   }
 }
 
-var createdRGB2 = [];
-var createdRGB3 = [];
-var createdRGB4 = [];
-var createdRGB5 = [];
-var createdRGB6 = [];
+
 
 
 
   
   if(createdRGB2.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
-    createdRGB2.push(colorMixedArray[0]);
-    colorMixedArray.shift();
-    console.log(createdRGB2);
-  } else if(createdRGB3.length < 3){
-    createdRGB3.push(colorMixedArray[0]);
-    colorMixedArray.shift();
-    console.log(createdRGB3)
-  } else if(createdRGB4.length < 3){
-    createdRGB4.push(colorMixedArray[0]);
-    colorMixedArray.shift();
-  } else if(createdRGB5.length < 3){
-    createdRGB5.push(colorMixedArray[0]);
-    colorMixedArray.shift();
-  }else if(createdRGB6.length < 3){
-    createdRGB6.push(colorMixedArray[0]);
-    colorMixedArray.shift();
+    createdRGBhard2.push(hardColorMixedArray[0]);
+    hardColorMixedArray.shift();
+  } else if(createdRGBhard3.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
+    createdRGBhard3.push(hardColorMixedArray[0]);
+    hardColorMixedArray.shift();
+  } else if(createdRGBhard4.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
+    createdRGBhard4.push(hardColorMixedArray[0]);
+    hardColorMixedArray.shift();
+  } else if(createdRGBhard5.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
+    createdRGBhard5.push(hardColorMixedArray[0]);
+    hardColorMixedArray.shift();
+  }else if(createdRGBhard6.length < 3 && numberOfRandomNumbersNeededForSquares > 6){
+    createdRGBhard6.push(hardColorMixedArray[0]);
+    hardColorMixedArray.shift();
   
   }
-}
 
-    colorMixedArray.push(createdRGB2);
-    colorMixedArray.push(createdRGB3);
-    colorMixedArray.push(createdRGB4);
-    colorMixedArray.push(createdRGB5);
-    colorMixedArray.push(createdRGB6);
-    colorMixedArray.push(correctRGB);
+    hardColorMixedArray.push(createdRGBhard2);
+    hardColorMixedArray.push(createdRGBhard3);
+    hardColorMixedArray.push(createdRGBhard4);
+    hardColorMixedArray.push(createdRGBhard5);
+    hardColorMixedArray.push(createdRGBhard6);
+    hardColorMixedArray.push(correctRGB);
 
     // shuffling colorMixedArray and finding correctRGB array index
 
@@ -100,7 +101,14 @@ let shufflingArray = function(arr){
 }
 //-------------------
 
-var shuffledColorArray = shufflingArray(colorMixedArray);
+function shuffledColorArray(arr){
+  if(arr === hardColorMixedArray){
+    return finishedShuffledColorArray = shufflingArray(arr);
+  } else if(arr === easyColorMixedArray){
+    return finishedShuffledColorArray = shufflingArray(arr);
+  }
+}
+
 console.log("this is the shuffledColorArray - ");  
 console.log(shuffledColorArray);
 
