@@ -1,8 +1,12 @@
 RGB Guessing Game ToDo List
 _________________________________________________________________________
+Currently working on
+
+- connect the random colors to squares -
+_________________________________________________________________________
 1) test createRandomRGBCombinationsForSquares function to see if it works
 2) 
-2) connect the random colors to squares
+2) 
 2) create eventListeners for reset button
 3) create eventListener for easy button
 4) create eventListener for hard button
