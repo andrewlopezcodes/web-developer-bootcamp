@@ -14,12 +14,40 @@ colorDisplay.textContent = correctColor;
 
 easyModeButton.addEventListener("click", function(){
   this.classList.add("modeSelected");
-  hardModeButton.classList.remove("modeSelected")
+  
+  for(var e = 3; e < squares.length; e++){
+    squares[e].style.display = "none";
+    squares[e].classList.remove("square");
+  }
+
+  hardModeButton.classList.remove("modeSelected");
+  colors = [];
+  colors = getRandomColors(3);
+  correctColor = getCorrectColor();
+  colorDisplay.textContent = correctColor;
+  for(var e = 0; e < squares.length; e++){
+    if(squares[e]){
+      squares[e].style.backgroundColor = colors[e];
+    } 
+  }
 });
 
 hardModeButton.addEventListener("click", function(){
   this.classList.add("modeSelected");
-  easyModeButton.classList.remove("modeSelected")
+  for(var f = 3; f < squares.length; f++){
+    squares[f].style.display = "block";
+    squares[f].classList.add("square");
+  }
+  easyModeButton.classList.remove("modeSelected");
+  colors = [];
+  colors = getRandomColors(6);
+  correctColor = getCorrectColor();
+  colorDisplay.textContent = correctColor;
+  for(var f = 0; f < squares.length; f++){
+    if(squares[f]){
+      squares[f].style.backgroundColor = colors[f];
+    } 
+  }
 });
 
 newColorsButton.addEventListener("click", function(){
