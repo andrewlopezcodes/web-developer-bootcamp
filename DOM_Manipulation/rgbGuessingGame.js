@@ -8,12 +8,16 @@ var headerMessage = document.getElementById("headerMessage");
 var newColorsButton = document.getElementById("newColorsButton");
 var easyModeButton = document.getElementById("easyModeButton");
 var hardModeButton = document.getElementById("hardModeButton");
+var easyModeOn = false;
+var hardModeOn = false;
 
 
 colorDisplay.textContent = correctColor;
 
 easyModeButton.addEventListener("click", function(){
   this.classList.add("modeSelected");
+  easyModeOn = true;
+  hardModeOn = false;
   
   for(var e = 3; e < squares.length; e++){
     squares[e].style.display = "none";
@@ -34,6 +38,8 @@ easyModeButton.addEventListener("click", function(){
 
 hardModeButton.addEventListener("click", function(){
   this.classList.add("modeSelected");
+  easyModeOn = false;
+  hardModeOn = true;
   for(var f = 3; f < squares.length; f++){
     squares[f].style.display = "block";
     squares[f].classList.add("square");
@@ -51,7 +57,12 @@ hardModeButton.addEventListener("click", function(){
 });
 
 newColorsButton.addEventListener("click", function(){
-  colors = getRandomColors(6);
+  if(hardModeOn === true){
+    colors = getRandomColors(6);
+  } else {
+    colors = getRandomColors(3);
+  }
+  
   correctColor = getCorrectColor();
   colorDisplay.textContent = correctColor;
   for(var d = 0; d < squares.length; d++){
