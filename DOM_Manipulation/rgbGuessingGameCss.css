@@ -24,3 +24,8 @@ h1 {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.modeSelected {
+  border: 2px solid gold;
+  background-color: khaki;
+}

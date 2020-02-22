@@ -8,7 +8,19 @@ var headerMessage = document.getElementById("headerMessage");
 var newColorsButton = document.getElementById("newColorsButton");
 var easyModeButton = document.getElementById("easyModeButton");
 var hardModeButton = document.getElementById("hardModeButton");
+
+
 colorDisplay.textContent = correctColor;
+
+easyModeButton.addEventListener("click", function(){
+  this.classList.add("modeSelected");
+  hardModeButton.classList.remove("modeSelected")
+});
+
+hardModeButton.addEventListener("click", function(){
+  this.classList.add("modeSelected");
+  easyModeButton.classList.remove("modeSelected")
+});
 
 newColorsButton.addEventListener("click", function(){
   colors = getRandomColors(6);
@@ -17,6 +29,8 @@ newColorsButton.addEventListener("click", function(){
   for(var d = 0; d < squares.length; d++){
     squares[d].style.backgroundColor = colors[d];
   }
+  headerMessage.style.backgroundColor = "black";
+  statusDisplay.innerText = " "
 });
 
 for(var a = 0; a < squares.length; a++){
