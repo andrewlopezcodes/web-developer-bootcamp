@@ -1,15 +1,22 @@
 body {
   background-color: black;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
 h1 {
   font-size: 3em;
   color: white;
   text-align: center;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 #stripe {
   background-color: grey;
   height: 30px;
   text-align: center;
+  margin: 0;
 }
 
 .square {
