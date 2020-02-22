@@ -10,17 +10,31 @@ var colors = [
 var squares = document.querySelectorAll(".square");
 var pickedColor = colors[3];
 var colorDisplay = document.getElementById("colorDisplay");
+var statusDisplay = document.getElementById("statusDisplay");
+var headerMessage = document.getElementById("headerMessage");
+var newColorsButton = document.getElementById("newColors");
 colorDisplay.textContent = pickedColor;
 
-for(var i = 0; i < squares.length; i++){
-  squares[i].style.backgroundColor = colors[i];
-  squares[i].addEventListener("click", function(){
+for(var a = 0; a < squares.length; a++){
+  squares[a].style.backgroundColor = colors[a];
+  squares[a].addEventListener("click", function(){
     var clickedColor = this.style.backgroundColor;
     if(clickedColor === pickedColor){
-      alert("Correct");
+      // squares.style.background = pickedColor;
+      statusDisplay.innerText = "Congrats. You Win!!!"
+      headerMessage.style.backgroundColor = pickedColor;
+      newColorsButton.innerText = "Play Again?";
     } else {
-      alert("try again")
+      this.style.backgroundColor = "black";
+      statusDisplay.innerText = "Try Again!";
+
     }
   });
 
+}
+
+function changeAllSquareColors(colors){
+  for(var b = 0; b < colors.length; b++){
+    
+  };
 }
