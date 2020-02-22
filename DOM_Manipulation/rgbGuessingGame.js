@@ -11,8 +11,12 @@ var hardModeButton = document.getElementById("hardModeButton");
 colorDisplay.textContent = correctColor;
 
 newColorsButton.addEventListener("click", function(){
-  getRandomColors(6);
-  
+  colors = getRandomColors(6);
+  correctColor = getCorrectColor();
+  colorDisplay.textContent = correctColor;
+  for(var d = 0; d < squares.length; d++){
+    squares[d].style.backgroundColor = colors[d];
+  }
 });
 
 for(var a = 0; a < squares.length; a++){
