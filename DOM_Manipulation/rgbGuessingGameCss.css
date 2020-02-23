@@ -12,11 +12,33 @@ h1 {
   font-weight: normal;
   text-transform: uppercase;
 }
+
+#colorDisplay {
+  font-size: 250%;
+}
+
+#directions {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  margin: 0;
+  
+}
+
 #stripe {
   background-color: grey;
   height: 30px;
   text-align: center;
   margin: 0;
+}
+
+#statusDisplay {
+  display: inline-block;
+  width: 20%;
+  color: white;
+  font-size: 130%;
+  font-weight: 800%;
+  
 }
 
 .square {
@@ -34,5 +56,14 @@ h1 {
 
 .modeSelected {
   border: 2px solid gold;
-  background-color: khaki;
+  background-color: white;
+
+}
+
+button {
+  height: 100%;
+  background-color: grey;
+  border: none;
+  color: black;
+  font-size: 1em;
 }

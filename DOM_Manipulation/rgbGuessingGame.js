@@ -8,6 +8,7 @@ var headerMessage = document.getElementById("headerMessage");
 var newColorsButton = document.getElementById("newColorsButton");
 var easyModeButton = document.getElementById("easyModeButton");
 var hardModeButton = document.getElementById("hardModeButton");
+var directions = document.getElementById("directions");
 var easyModeOn = false;
 var hardModeOn = false;
 
@@ -25,6 +26,8 @@ easyModeButton.addEventListener("click", function(){
   }
 
   hardModeButton.classList.remove("modeSelected");
+  headerMessage.style.backgroundColor = "black";
+  directions.style.backgroundColor = "black";
   colors = [];
   colors = getRandomColors(3);
   correctColor = getCorrectColor();
@@ -45,6 +48,8 @@ hardModeButton.addEventListener("click", function(){
     squares[f].classList.add("square");
   }
   easyModeButton.classList.remove("modeSelected");
+  headerMessage.style.backgroundColor = "black";
+  directions.style.backgroundColor = "black";
   colors = [];
   colors = getRandomColors(6);
   correctColor = getCorrectColor();
@@ -69,6 +74,7 @@ newColorsButton.addEventListener("click", function(){
     squares[d].style.backgroundColor = colors[d];
   }
   headerMessage.style.backgroundColor = "black";
+  directions.style.backgroundColor = "black";
   statusDisplay.innerText = " "
 });
 
@@ -79,6 +85,7 @@ for(var a = 0; a < squares.length; a++){
     if(clickedColor === correctColor){
       // squares.style.background = pickedColor;
       changeAllSquareColors(clickedColor);
+      directions.style.backgroundColor = correctColor;
       statusDisplay.innerText = "Congrats. You Win!!!"
       headerMessage.style.backgroundColor = correctColor;
       newColorsButton.innerText = "Play Again?";
