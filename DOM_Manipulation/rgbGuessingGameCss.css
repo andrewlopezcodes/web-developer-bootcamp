@@ -22,7 +22,7 @@ h1 {
   color: white;
   font-size: 1.5em;
   margin: 0;
-  
+
 }
 
 #stripe {
@@ -42,6 +42,7 @@ h1 {
 }
 
 .square {
+  border-radius: 15px;
   width: 30%;
   background: purple;
   padding-bottom: 30%;
